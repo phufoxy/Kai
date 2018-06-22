@@ -10,8 +10,8 @@ import { Location } from '@angular/common';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FeedbackComponent implements OnInit {
-    private feedback: Feedback[];
-    private feedbacks: Feedback;
+    public feedback: Feedback[];
+    public feedbacks: Feedback;
     limit: number;
     numberOfBooks: number;
     page: number = 1;
@@ -20,7 +20,7 @@ export class FeedbackComponent implements OnInit {
     maxpage: number = 0;
     max: number = 0;
 
-    constructor(private feedbackService: FeedbackService,
+    constructor(public feedbackService: FeedbackService,
         private _router: Router,
         private location: Location,
         private ref: ChangeDetectorRef) { }

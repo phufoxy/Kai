@@ -10,8 +10,8 @@ import { EventService } from '../core/service/event.service';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EventDashboardComponent implements OnInit {
-    private event: Event;
-    private base64textString: String = '';
+    public event: Event;
+    public base64textString: String = '';
     editorConfig = {
         editable: true,
         spellcheck: false,
